@@ -652,23 +652,7 @@ spec:
   links:
   - name: IBM Spyre Operator
     url: https://spyre-operator.domain
-  maintainers:
-  - email: tmishina@jp.ibm.com
-    name: Takuya Mishina
-  - email: chiba@jp.ibm.com
-    name: Tatsuhiro Chiba
-  - email: sunyanan.choochotkaew1@ibm.com
-    name: Sunyanan Choochotkaew
-  - email: laurentiu.bradin@ibm.com
-    name: Laurentiu Bradin
-  - email: htchang@us.ibm.com
-    name: Ted Chang
-  - email: Satyam.Gupta.3@ibm.com
-    name: Satyam Gupta
-  - email: Rehan.Khan7@ibm.com
-    name: Rehan Khan
-  - email: Nishan.Acharya@ibm.com
-    name: Nishan Acharya
+  maintainers: []
   maturity: alpha
   minKubeVersion: 1.26.0
   provider:
