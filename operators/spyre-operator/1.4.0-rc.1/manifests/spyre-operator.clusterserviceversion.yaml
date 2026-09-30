@@ -68,7 +68,7 @@ metadata:
       ]
     capabilities: Basic Install
     categories: AI/Machine Learning
-    containerImage: icr.io/ibmaiu_operator/spyre-operator:1.4.0-rc.1
+    containerImage: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
     createdAt: "2026-09-18T08:08:02Z"
     description: Operator for IBM Spyre devices
     features.operators.openshift.io/disconnected: "false"
@@ -105,8 +105,7 @@ spec:
         path: cardManagement.args
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:advanced,urn:alm:descriptor:com.tectonic.ui:text
-      - description: Enabled indicates if deployment of Spyre Card Management through
-          operator is enabled
+      - description: Enabled indicates if deployment of Spyre Card Management through operator is enabled
         displayName: Enable Spyre Card Management through IBM Spyre Operator
         path: cardManagement.enabled
         x-descriptors:
@@ -243,8 +242,7 @@ spec:
         path: healthChecker.args
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:advanced,urn:alm:descriptor:com.tectonic.ui:text
-      - description: Enabled indicates if deployment of Spyre Health Checker through
-          operator is enabled
+      - description: Enabled indicates if deployment of Spyre Health Checker through operator is enabled
         displayName: Enable Spyre Health Checker deployment through IBM Spyre Operator
         path: healthChecker.enabled
         x-descriptors:
@@ -274,8 +272,7 @@ spec:
         path: metricsExporter.args
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:advanced,urn:alm:descriptor:com.tectonic.ui:text
-      - description: Enabled indicates if deployment of Spyre Metrics Exporter through
-          operator is enabled
+      - description: Enabled indicates if deployment of Spyre Metrics Exporter through operator is enabled
         displayName: Enable Spyre Metrics Exporter deployment through IBM Spyre Operator
         path: metricsExporter.enabled
         x-descriptors:
@@ -330,8 +327,7 @@ spec:
         path: podValidator.args
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:advanced,urn:alm:descriptor:com.tectonic.ui:text
-      - description: Enabled indicates if deployment of Spyre webhook for pod validation
-          through operator is enabled
+      - description: Enabled indicates if deployment of Spyre webhook for pod validation through operator is enabled
         displayName: Enable Spyre Webhook deployment through IBM Spyre Operator
         path: podValidator.enabled
         x-descriptors:
@@ -693,8 +689,8 @@ spec:
                     fieldRef:
                       fieldPath: metadata.namespace
                 - name: RELATED_IMAGE_SPYRE_OPERATOR
-                  value: icr.io/ibmaiu_operator/spyre-operator:1.4.0-rc.1
-                image: icr.io/ibmaiu_operator/spyre-operator:1.4.0-rc.1
+                  value: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
+                image: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
                 imagePullPolicy: Always
                 livenessProbe:
                   httpGet:
@@ -782,6 +778,12 @@ spec:
   provider:
     name: IBM
   relatedImages:
-  - image: icr.io/ibmaiu_operator/spyre-operator:1.4.0-rc.1
-    name: spyre-operator
+  - name: spyre-operator
+    image: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
+  - name: spyre-operator-cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6-annotation
+    image: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
+  - name: manager
+    image: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
+  - name: spyre_operator
+    image: icr.io/ibmaiu_operator/spyre-operator@sha256:cf6b947208ebc56f89d1ca8312fb4c455a461a2d2a2a464a26d23504b6f425d6
   version: 1.4.0-rc.1
